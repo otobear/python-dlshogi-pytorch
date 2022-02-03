@@ -45,8 +45,9 @@ python train_value.py kifulist_train.txt kifulist_test.txt
 - 転移学習(P188)
 
 ```
-python transfer_policy_to_value.py model/model_policy model/model_value_transferred
-python train_value.py kifulist_train.txt kifulist_test.txt -m model/model_value_transferred
+python utils/transfer_policy_to_value.py model/model_policy model/model_value_transferred
+python train_value.py kifulist_train.txt kifulist_test.txt --model model/model_value_transferred
+
 ```
 
 - マルチタスク学習(P199)
@@ -84,5 +85,5 @@ python -m pydlshogi.usi.usi_mcts_player
 - 並列化モンテカルロ木探索(P251)
 
 ```
-python -m pydlshogi.usi.usi_mcts_player
+python -m pydlshogi.usi.usi_parallel_mcts_player
 ```
